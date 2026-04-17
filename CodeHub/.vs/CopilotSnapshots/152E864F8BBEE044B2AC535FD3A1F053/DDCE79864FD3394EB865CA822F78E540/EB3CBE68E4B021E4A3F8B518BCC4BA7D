@@ -1,0 +1,85 @@
+﻿using Mobile.Models;
+using Mobile.Services;
+using Microsoft.Maui.ApplicationModel;
+using Microsoft.Maui.Controls;
+
+namespace Mobile;
+
+public partial class SnippetDetailsPage : ContentPage
+{
+    private readonly DatabaseService _db;
+    private readonly Snippet _snippet;
+
+    public SnippetDetailsPage(Snippet snippet)
+    {
+        InitializeComponent();
+
+        _db = new DatabaseService();
+        _snippet = snippet ?? throw new ArgumentNullException(nameof(snippet));
+
+        // Populate UI
+        Title = string.IsNullOrWhiteSpace(_snippet.Title) ? "Snippet" : _snippet.Title;
+        TitleLabel.Text = _snippet.Title;
+        LanguageLabel.Text = string.IsNullOrWhiteSpace(_snippet.Language) ? string.Empty : _snippet.Language.ToUpperInvariant();
+        ContentEditor.Text = _snippet.Content ?? string.Empty;
+    }
+
+    private async void OnCopyClicked(object sender, EventArgs e)
+    {
+        if (string.IsNullOrEmpty(_snippet?.Content))
+        {
+            await DisplayAlert("Info", "Nothing to copy.", "OK");
+            return;
+        }
+
+        try
+        {
+            await Clipboard.Default.SetTextAsync(_snippet.Content);
+            await DisplayAlert("Copied", "Snippet content copied to clipboard.", "OK");
+        }
+        catch (Exception ex)
+        {
+            await DisplayAlert("Error", $"Unable to copy: {ex.Message}", "OK");
+        }
+    }
+
+    private async void OnShareClicked(object sender, EventArgs e)
+    {
+        if (string.IsNullOrEmpty(_snippet?.Content))
+        {
+            await DisplayAlert("Info", "Nothing to share.", "OK");
+            return;
+        }
+
+        try
+        {
+            await Share.Default.RequestAsync(new ShareTextRequest
+            {
+                Text = _snippet.Content,
+                Title = _snippet.Title ?? "Snippet"
+            });
+        }
+        catch (Exception ex)
+        {
+            await DisplayAlert("Error", $"Unable to share: {ex.Message}", "OK");
+        }
+    }
+
+    private async void OnDeleteClicked(object sender, EventArgs e)
+    {
+        var confirm = await DisplayAlert("Delete", "Delete this snippet?", "Delete", "Cancel");
+        if (!confirm)
+            return;
+
+        try
+        {
+            await _db.DeleteSnippet(_snippet);
+            await DisplayAlert("Deleted", "Snippet deleted.", "OK");
+            await Navigation.PopAsync();
+        }
+        catch (Exception ex)
+        {
+            await DisplayAlert("Error", $"Failed to delete: {ex.Message}", "OK");
+        }
+    }
+}

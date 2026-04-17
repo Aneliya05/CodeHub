@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Mobile.MainPage" BackgroundColor="#080B12">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="PrimaryButton" TargetType="Button">
+                <Setter Property="BackgroundColor" Value="#3D6FE8"/>
+                <Setter Property="TextColor" Value="#FFFFFF"/>
+                <Setter Property="CornerRadius" Value="14"/>
+                <Setter Property="HeightRequest" Value="52"/>
+                <Setter Property="FontAttributes" Value="Bold"/>
+                <Setter Property="FontSize" Value="15"/>
+                <Setter Property="CharacterSpacing" Value="0.3"/>
+            </Style>
+            <Style x:Key="GhostButton" TargetType="Button">
+                <Setter Property="BackgroundColor" Value="#10141E"/>
+                <Setter Property="TextColor" Value="#6B7694"/>
+                <Setter Property="CornerRadius" Value="10"/>
+                <Setter Property="HeightRequest" Value="36"/>
+                <Setter Property="WidthRequest" Value="36"/>
+                <Setter Property="BorderColor" Value="#1E2540"/>
+                <Setter Property="BorderWidth" Value="1"/>
+                <Setter Property="FontSize" Value="14"/>
+                <Setter Property="Padding" Value="0"/>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <!-- MAIN LAYOUT -->
+    <Grid RowDefinitions="Auto,*">
+        <!-- HEADER -->
+        <Grid Padding="22,54,22,16" RowDefinitions="Auto,Auto,Auto" RowSpacing="0">
+            <!-- Top accent line -->
+            <BoxView Grid.Row="0" HeightRequest="1" Margin="0,0,0,20" Color="#1A2040"/>
+            <!-- Title row -->
+            <Grid Grid.Row="1" ColumnDefinitions="*,Auto" Margin="0,0,0,18">
+                <VerticalStackLayout Grid.Column="0" Spacing="2" VerticalOptions="Center">
+                    <Label Text="MY SNIPPETS" FontSize="11" FontAttributes="Bold" TextColor="#3D6FE8" CharacterSpacing="2.5"/>
+                    <Label Text="Code Hub" FontSize="28" FontAttributes="Bold" TextColor="#DDE2F0"/>
+                </VerticalStackLayout>
+                <!-- Icon badge -->
+                <Frame Grid.Column="1" WidthRequest="44" HeightRequest="44" CornerRadius="13" BackgroundColor="#10141E" BorderColor="#1E2540" Padding="0" VerticalOptions="Center">
+                    <Label Text="〈/〉" FontSize="14" FontAttributes="Bold" TextColor="#3D6FE8" HorizontalOptions="Center" VerticalOptions="Center"/>
+                </Frame>
+            </Grid>
+            <!-- CREATE BUTTON -->
+            <Button Grid.Row="2" Text="＋ New Snippet" Style="{StaticResource PrimaryButton}" Clicked="OnCreateClicked"/>
+        </Grid>
+        <!-- CONTENT AREA -->
+        <Grid Grid.Row="1" RowDefinitions="Auto,*">
+            <!-- Section label -->
+            <Label Grid.Row="0" Text="RECENT" FontSize="10" FontAttributes="Bold" TextColor="#3A4468" CharacterSpacing="2.5" Margin="22,8,22,6"/>
+            <!-- LIST VIEW -->
+            <CollectionView x:Name="SnippetsList" Grid.Row="1" Margin="14,0,14,20">
+                <CollectionView.ItemsLayout>
+                    <LinearItemsLayout Orientation="Vertical" ItemSpacing="10"/>
+                </CollectionView.ItemsLayout>
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Frame Padding="16,14" BackgroundColor="#0D1120" BorderColor="#1A2040" CornerRadius="16" HasShadow="False">
+                            <Grid RowDefinitions="Auto,Auto,Auto" ColumnDefinitions="*,Auto" RowSpacing="0">
+                                <!-- Language / tag pill -->
+                                <Frame Grid.Row="0" Grid.Column="0" Padding="8,3" BackgroundColor="#111830" BorderColor="#1E2A50" CornerRadius="6" HorizontalOptions="Start" Margin="0,0,0,8">
+                                    <Label Text="{Binding Language}" FontSize="10" FontAttributes="Bold" TextColor="#3D6FE8" CharacterSpacing="1"/>
+                                </Frame>
+                                <!-- Action buttons aligned to tag row -->
+                                <HorizontalStackLayout Grid.Row="0" Grid.RowSpan="3" Grid.Column="1" Spacing="8" VerticalOptions="Center">
+                                    <Button Text="👁" Style="{StaticResource GhostButton}" Clicked="OnViewClicked" CommandParameter="{Binding .}"/>
+                                    <Button Text="🗑" Style="{StaticResource GhostButton}" Clicked="OnDeleteClicked" CommandParameter="{Binding .}"/>
+                                </HorizontalStackLayout>
+                                <!-- Title -->
+                                <Label Grid.Row="1" Grid.Column="0" Text="{Binding Title}" FontAttributes="Bold" FontSize="15" TextColor="#DDE2F0" Margin="0,0,0,5"/>
+                                <!-- Content preview -->
+                                <Label Grid.Row="2" Grid.Column="0" Text="{Binding Content}" FontSize="12" FontFamily="Courier New" TextColor="#4A5678" LineBreakMode="TailTruncation" MaxLines="2"/>
+                            </Grid>
+                        </Frame>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </Grid>
+    </Grid>
+</ContentPage>

@@ -1,0 +1,134 @@
+﻿using Mobile.Models;
+using System.Text;
+using System.Text.Json;
+using static System.Net.Mime.MediaTypeNames;
+
+namespace Mobile.Services;
+
+public class AiService
+{
+    private readonly HttpClient _http = new(); 
+    private const string ApiKey = "AIzaSyBXHq3K55rxV-pZ0-gNhWZk660IwLtKXUg";
+
+    private const string Model = "gemini-2.5-flash";
+    public async Task<CodeResult> GenerateSnippet(string prompt)
+    {
+        var url = $"https://generativelanguage.googleapis.com/v1/models/{Model}:generateContent?key={ApiKey}";
+
+
+        var requestBody = new
+        {
+            contents = new[]
+            {
+            new
+            {
+                parts = new[]
+                {
+                    new { text = @$"
+                        Return JSON in this format:
+                        {{ ""language"": ""..."", ""code"": ""..."" }}
+
+                        Rules:
+                        - ONLY JSON
+                        - No markdown
+                        - No explanations
+                        - If no language is specified, return C# code
+
+                        Task:
+                        {prompt}
+                        "}
+                }
+            }
+        }
+        };
+
+        var json = JsonSerializer.Serialize(requestBody);
+
+        var response = await _http.PostAsync(
+            url,
+            new StringContent(json, Encoding.UTF8, "application/json"));
+
+        var result = await response.Content.ReadAsStringAsync();
+
+        if (!response.IsSuccessStatusCode)
+        {
+            return new CodeResult
+            {
+                Code = $"ERROR: {response.StatusCode} - {result}"
+            };
+        }
+
+        using var doc = JsonDocument.Parse(result);
+
+        var text = doc.RootElement
+            .GetProperty("candidates")[0]
+            .GetProperty("content")
+            .GetProperty("parts")[0]
+            .GetProperty("text")
+            .GetString();
+
+        return JsonSerializer.Deserialize<CodeResult>(text) ?? new CodeResult { Code = "ERROR: Unable to parse response" };
+    }
+
+    public async Task<string> ExplainCode(string code)
+    {
+        var url = $"https://generativelanguage.googleapis.com/v1/models/{Model}:generateContent?key={ApiKey}";
+
+        var requestBody = new
+        {
+            contents = new[]
+            {
+                new
+                {
+                    parts = new[]
+                    {
+                        new { text = @$"
+                            Provide a clear, concise plain-text explanation of the following code.\n
+                            Rules:\n
+                            - Return ONLY plain text (no JSON, no markdown, no code blocks).\n
+                            - Do not include any extra commentary or headings.\n
+                            Code to explain:\n
+                            {code}
+                            "}
+                    }
+                }
+            }
+        };
+
+        var json = JsonSerializer.Serialize(requestBody);
+
+        var response = await _http.PostAsync(
+            url,
+            new StringContent(json, Encoding.UTF8, "application/json"));
+
+        var result = await response.Content.ReadAsStringAsync();
+
+        if (!response.IsSuccessStatusCode)
+        {
+            return $"ERROR: {response.StatusCode} - {result}";
+        }
+
+        using var doc = JsonDocument.Parse(result);
+
+        var text = doc.RootElement
+            .GetProperty("candidates")[0]
+            .GetProperty("content")
+            .GetProperty("parts")[0]
+            .GetProperty("text")
+            .GetString();
+
+        return text ?? "ERROR: Unable to parse response";
+    }
+
+    public async Task<CodeResult> OptimizeCode(string code)
+    {
+        var prompt = $"Optimize the following code:\n{code}";
+        return await GenerateSnippet(prompt);
+    }
+
+    public async Task<string> GenerateAnalysis(string code)
+    {
+        var prompt = $"Generate a short analysis of the following code, include complexity and possible improvements:\n{code}";
+        return await ExplainCode(prompt);
+    }
+}

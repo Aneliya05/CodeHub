@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Mobile.MainPage"
+             BackgroundColor="#0A0C10">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+
+            <Style x:Key="PrimaryButton" TargetType="Button">
+                <Setter Property="BackgroundColor" Value="#4F8EF7"/>
+                <Setter Property="TextColor" Value="#FFFFFF"/>
+                <Setter Property="CornerRadius" Value="10"/>
+                <Setter Property="HeightRequest" Value="48"/>
+                <Setter Property="FontAttributes" Value="Bold"/>
+            </Style>
+
+            <Style x:Key="GhostButton" TargetType="Button">
+                <Setter Property="BackgroundColor" Value="#13161D"/>
+                <Setter Property="TextColor" Value="#7B8599"/>
+                <Setter Property="CornerRadius" Value="10"/>
+                <Setter Property="HeightRequest" Value="48"/>
+                <Setter Property="BorderColor" Value="#252B38"/>
+                <Setter Property="BorderWidth" Value="1"/>
+            </Style>
+
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <!-- MAIN LAYOUT -->
+    <Grid RowDefinitions="Auto,*">
+
+        <!-- HEADER -->
+        <VerticalStackLayout Padding="20,50,20,10" Spacing="10">
+
+            <Label Text="My Snippets"
+                   FontSize="26"
+                   FontAttributes="Bold"
+                   TextColor="#E8EAF0"/>
+
+            <Button Text="➕ Create Snippet"
+                    Style="{StaticResource PrimaryButton}"
+                    Clicked="OnCreateClicked"/>
+        </VerticalStackLayout>
+
+        <!-- CONTENT AREA -->
+        <Grid Grid.Row="1"
+              RowDefinitions="*,Auto">
+
+            <!-- LIST VIEW -->
+            <CollectionView x:Name="SnippetsList">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Frame Margin="5" Padding="12" BackgroundColor="#13161D" BorderColor="#1E2330">
+                            <Grid ColumnDefinitions="*, Auto">
+
+                                <VerticalStackLayout Grid.Column="0" VerticalOptions="Center">
+                                    <Label Text="{Binding Title}" FontAttributes="Bold" TextColor="#E8EAF0"/>
+                                    <Label Text="{Binding Content}" FontSize="12" TextColor="#7B8599" LineBreakMode="TailTruncation"/>
+                                </VerticalStackLayout>
+
+                                <HorizontalStackLayout Grid.Column="1" Spacing="8" VerticalOptions="Center">
+                                    <Button Text="👁️" 
+                                        Style="{StaticResource GhostButton}"
+                                        WidthRequest="40" 
+                                        Clicked="OnViewClicked"
+                                        CommandParameter="{Binding .}"/>
+
+                                    <Button Text="🗑️" 
+                                        Style="{StaticResource GhostButton}"
+                                        WidthRequest="40" 
+                                        Clicked="OnDeleteClicked"
+                                        CommandParameter="{Binding .}"/>
+                                </HorizontalStackLayout>
+                            </Grid>
+                        </Frame>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+
+        </Grid>
+
+    </Grid>
+
+</ContentPage>

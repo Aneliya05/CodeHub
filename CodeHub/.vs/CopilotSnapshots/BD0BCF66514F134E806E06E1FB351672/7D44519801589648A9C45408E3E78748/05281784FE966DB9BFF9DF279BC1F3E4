@@ -1,0 +1,181 @@
+﻿using Mobile.Models;
+using System.Text;
+using System.Text.Json;
+
+namespace Mobile.Services;
+
+public class AiService
+{
+    private readonly HttpClient _http = new();
+
+    private const string ApiKey = "YOUR_API_KEY_HERE";
+    private const string Model = "gemini-2.5-flash";
+
+    private readonly string url;
+
+    public AiService()
+    {
+        url = $"https://generativelanguage.googleapis.com/v1/models/{Model}:generateContent?key={ApiKey}";
+    }
+
+    public async Task<CodeResult> GenerateSnippet(string prompt, string language)
+    {
+        var requestBody = new
+        {
+            contents = new[]
+            {
+                new
+                {
+                    parts = new[]
+                    {
+                        new
+                        {
+                            text = @$"
+                                Return ONLY valid JSON.
+
+                                Format:
+                                {{
+                                  ""language"": ""{language}"",
+                                  ""code"": ""BASE64_ENCODED_CODE""
+                                }}
+
+                                Rules:
+                                - NO markdown
+                                - NO backticks
+                                - NO explanations
+                                - CODE MUST be base64 encoded
+                                - Return ONLY JSON
+
+                                Task:
+                                {prompt}
+                                "
+                        }
+                    }
+                }
+            }
+        };
+
+        var json = JsonSerializer.Serialize(requestBody);
+
+        var response = await _http.PostAsync(
+            url,
+            new StringContent(json, Encoding.UTF8, "application/json"));
+
+        var result = await response.Content.ReadAsStringAsync();
+
+        if (!response.IsSuccessStatusCode)
+        {
+            throw new Exception($"API Error: {response.StatusCode}\n{result}");
+        }
+
+        try
+        {
+            using var doc = JsonDocument.Parse(result);
+
+            var text = doc.RootElement
+                .GetProperty("candidates")[0]
+                .GetProperty("content")
+                .GetProperty("parts")[0]
+                .GetProperty("text")
+                .GetString();
+
+            text = CleanJson(text);
+
+            var obj = JsonSerializer.Deserialize<CodeResult>(text);
+
+            if (obj == null)
+            {
+               throw new Exception("Deserialization failed");
+            }
+
+            obj.Code = DecodeBase64(obj.Code);
+
+            return obj;
+        }
+        catch (Exception ex)
+        {
+            throw new Exception($"Parsing Error: {ex.Message}\nResponse: {result}");
+        }
+    }
+
+    public async Task<string> ExplainCode(string code)
+    {
+        var requestBody = new
+        {
+            contents = new[]
+            {
+                new
+                {
+                    parts = new[]
+                    {
+                        new
+                        {
+                            text = @$"
+                                Explain this code in simple terms:
+
+                                {code}
+                                "
+                        }
+                    }
+                }
+            }
+        };
+
+        var json = JsonSerializer.Serialize(requestBody);
+
+        var response = await _http.PostAsync(
+            url,
+            new StringContent(json, Encoding.UTF8, "application/json"));
+
+        var result = await response.Content.ReadAsStringAsync();
+
+        if (!response.IsSuccessStatusCode)
+        {
+            return $"ERROR: {response.StatusCode}\n{result}";
+        }
+
+        using var doc = JsonDocument.Parse(result);
+
+        return doc.RootElement
+            .GetProperty("candidates")[0]
+            .GetProperty("content")
+            .GetProperty("parts")[0]
+            .GetProperty("text")
+            .GetString()
+            ?? "ERROR: Empty response";
+    }
+
+    private string CleanJson(string input)
+    {
+        if (string.IsNullOrWhiteSpace(input))
+            return "";
+
+        input = input.Trim();
+
+        if (input.StartsWith("```"))
+        {
+            var start = input.IndexOf('{');
+            var end = input.LastIndexOf('}');
+
+            if (start >= 0 && end > start)
+            {
+                input = input.Substring(start, end - start + 1);
+            }
+        }
+
+        return input;
+    }
+
+    private string DecodeBase64(string base64)
+    {
+        try
+        {
+            var bytes = Convert.FromBase64String(base64);
+            return Encoding.UTF8.GetString(bytes);
+        }
+        catch
+        {
+            return "ERROR: Invalid base64 code";
+        }
+    }
+}

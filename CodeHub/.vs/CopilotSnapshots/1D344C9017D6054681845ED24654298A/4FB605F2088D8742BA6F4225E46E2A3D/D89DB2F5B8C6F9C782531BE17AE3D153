@@ -1,0 +1,169 @@
+﻿using Mobile.Models;
+using Mobile.Services;
+using Mobile.Models;
+using System.Net;
+using Microsoft.Maui.ApplicationModel;
+using Microsoft.Maui.Controls;      
+
+namespace Mobile;
+
+public partial class SnippetDetailsPage : ContentPage
+{
+    private readonly DatabaseService _db;
+    private readonly Snippet _snippet;
+    private readonly AiService _aiService;
+
+    public SnippetDetailsPage(Snippet snippet)
+    {
+        InitializeComponent();
+
+        _aiService = new AiService();
+        _db = new DatabaseService();
+        _snippet = snippet ?? throw new ArgumentNullException(nameof(snippet));
+
+        Title = "Snippet";
+        TitleLabel.Text = _snippet.Title;
+        LanguageLabel.Text = string.IsNullOrWhiteSpace(_snippet.Language) ? string.Empty : _snippet.Language.ToUpperInvariant();
+        LoadContentToWebView();
+    }
+
+    private void LoadContentToWebView()
+    {
+        var code = _snippet.Content ?? string.Empty;
+        var lang = (_snippet.Language ?? "").ToLowerInvariant();
+        
+        if (lang == "c#" || lang == "cs" || lang == "csharp") lang = "csharp";
+        if (lang == "js" || lang == "javascript") lang = "javascript";
+
+        var encoded = WebUtility.HtmlEncode(code);
+
+        var html = $@"<!doctype html>
+        <html>
+        <head>
+          <meta charset='utf-8'>
+          <meta name='viewport' content='width=device-width, initial-scale=1'>
+          <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/github-dark.min.css'>
+          <script src='https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js'></script>
+          <script>hljs.configure({{ignoreUnescapedHtml:true}});</script>
+          <style>body{{background:transparent;color:#E8EAF0;margin:0;padding:12px;font-family:monospace;}}</style>
+        </head>
+        <body>
+        <pre><code class='language-{lang}'>
+        {encoded}
+        </code></pre>
+        <script>hljs.highlightAll();</script>
+        </body>
+        </html>";
+
+        ContentWebView.Source = new HtmlWebViewSource { Html = html };
+    }
+
+   
+    private async void OnEditClicked(object sender, EventArgs e)
+    {
+        // Open edit page and provide a callback to update UI after save
+        await Navigation.PushAsync(new EditSnippetPage(_snippet, async updated =>
+        {
+            _snippet.Title = updated.Title;
+            _snippet.Language = updated.Language;
+            _snippet.Content = updated.Content;
+            Title = "Snippet";
+            TitleLabel.Text = _snippet.Title;
+            LanguageLabel.Text = string.IsNullOrWhiteSpace(_snippet.Language) ? string.Empty : _snippet.Language.ToUpperInvariant();
+            LoadContentToWebView();
+        }));
+    }
+
+    private async void OnExplainClicked(object sender, EventArgs e)
+    {
+        try
+        {
+            var res = await _aiService.ExplainCode(_snippet.Content);
+            await DisplayAlert("Explanation", res ?? "No response", "OK");
+        }
+        catch (Exception ex)
+        {
+            await DisplayAlert("Error", ex.Message, "OK");
+        }
+    }
+
+    private async void OnOptimizeClicked(object sender, EventArgs e)
+    {
+        try
+        {
+            var res = await _aiService.OptimizeCode(_snippet.Content);
+            await DisplayAlert("Optimized Code", res.Code ?? "No response", "OK");
+        }
+        catch (Exception ex)
+        {
+            await DisplayAlert("Error", ex.Message, "OK");
+        }
+    }
+
+    private async void OnGenerateAnalysisClicked(object sender, EventArgs e)
+    {
+        try
+        {
+            var prompt = $"Generate a short analysis of the following code, include complexity and possible improvements:\n{_snippet.Content}";
+            var res = await _aiService.GenerateSnippet(prompt);
+            await DisplayAlert("Analysis", res.Code ?? "No response", "OK");
+        }
+        catch (Exception ex)
+        {
+            await DisplayAlert("Error", ex.Message, "OK");
+        }
+    }
+
+    private async void OnCopyClicked(object sender, EventArgs e)
+    {
+        try
+        {
+            await Clipboard.Default.SetTextAsync(_snippet.Content);
+            await DisplayAlert("Copied", "Snippet content copied to clipboard.", "OK");
+        }
+        catch (Exception ex)
+        {
+            await DisplayAlert("Error", $"Unable to copy: {ex.Message}", "OK");
+        }
+    }
+
+    private async void OnShareClicked(object sender, EventArgs e)
+    {
+        if (string.IsNullOrEmpty(_snippet?.Content))
+        {
+            await DisplayAlert("Info", "Nothing to share.", "OK");
+            return;
+        }
+
+        try
+        {
+            await Share.Default.RequestAsync(new ShareTextRequest
+            {
+                Text = _snippet.Content,
+                Title = _snippet.Title ?? "Snippet"
+            });
+        }
+        catch (Exception ex)
+        {
+            await DisplayAlert("Error", $"Unable to share: {ex.Message}", "OK");
+        }
+    }
+
+    private async void OnDeleteClicked(object sender, EventArgs e)
+    {
+        var confirm = await DisplayAlert("Delete", "Delete this snippet?", "Delete", "Cancel");
+        if (!confirm)
+            return;
+
+        try
+        {
+            await _db.DeleteSnippet(_snippet);
+            await DisplayAlert("Deleted", "Snippet deleted.", "OK");
+            await Navigation.PopAsync();
+        }
+        catch (Exception ex)
+        {
+            await DisplayAlert("Error", $"Failed to delete: {ex.Message}", "OK");
+        }
+    }
+}
