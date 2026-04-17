@@ -1,75 +1,74 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\aneli\\Desktop\\CodeHub\\",
+  "WorkspaceRootPath": "D:\\Aneliya\\Uni\\AI Integrations\\CodeHub\\CodeHub\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\aneli\\Desktop\\CodeHub\\README.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}|",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:README.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}|"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\aneli\\Desktop\\CodeHub\\README.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7DB4BD4A-29C2-489D-BF4A-F37FE7ECE9D6}|Mobile\\Mobile.csproj|c:\\users\\aneli\\desktop\\codehub\\mobile\\services\\aiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{7DB4BD4A-29C2-489D-BF4A-F37FE7ECE9D6}|Mobile\\Mobile.csproj|d:\\aneliya\\uni\\ai integrations\\codehub\\codehub\\mobile\\services\\aiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7DB4BD4A-29C2-489D-BF4A-F37FE7ECE9D6}|Mobile\\Mobile.csproj|solutionrelative:mobile\\services\\aiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7DB4BD4A-29C2-489D-BF4A-F37FE7ECE9D6}|Mobile\\Mobile.csproj|c:\\users\\aneli\\desktop\\codehub\\mobile\\snippetdetailspage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "AbsoluteMoniker": "D:0:0:{7DB4BD4A-29C2-489D-BF4A-F37FE7ECE9D6}|Mobile\\Mobile.csproj|d:\\aneliya\\uni\\ai integrations\\codehub\\codehub\\mobile\\snippetdetailspage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{7DB4BD4A-29C2-489D-BF4A-F37FE7ECE9D6}|Mobile\\Mobile.csproj|solutionrelative:mobile\\snippetdetailspage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7DB4BD4A-29C2-489D-BF4A-F37FE7ECE9D6}|Mobile\\Mobile.csproj|c:\\users\\aneli\\desktop\\codehub\\mobile\\snippetdetailspage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{7DB4BD4A-29C2-489D-BF4A-F37FE7ECE9D6}|Mobile\\Mobile.csproj|d:\\aneliya\\uni\\ai integrations\\codehub\\codehub\\mobile\\snippetdetailspage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7DB4BD4A-29C2-489D-BF4A-F37FE7ECE9D6}|Mobile\\Mobile.csproj|solutionrelative:mobile\\snippetdetailspage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7DB4BD4A-29C2-489D-BF4A-F37FE7ECE9D6}|Mobile\\Mobile.csproj|c:\\users\\aneli\\desktop\\codehub\\mobile\\createsnippetpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{7DB4BD4A-29C2-489D-BF4A-F37FE7ECE9D6}|Mobile\\Mobile.csproj|d:\\aneliya\\uni\\ai integrations\\codehub\\codehub\\mobile\\createsnippetpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7DB4BD4A-29C2-489D-BF4A-F37FE7ECE9D6}|Mobile\\Mobile.csproj|solutionrelative:mobile\\createsnippetpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7DB4BD4A-29C2-489D-BF4A-F37FE7ECE9D6}|Mobile\\Mobile.csproj|c:\\users\\aneli\\desktop\\codehub\\mobile\\models\\coderesult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{7DB4BD4A-29C2-489D-BF4A-F37FE7ECE9D6}|Mobile\\Mobile.csproj|d:\\aneliya\\uni\\ai integrations\\codehub\\codehub\\mobile\\models\\coderesult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7DB4BD4A-29C2-489D-BF4A-F37FE7ECE9D6}|Mobile\\Mobile.csproj|solutionrelative:mobile\\models\\coderesult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7DB4BD4A-29C2-489D-BF4A-F37FE7ECE9D6}|Mobile\\Mobile.csproj|c:\\users\\aneli\\desktop\\codehub\\mobile\\models\\languageoptions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{7DB4BD4A-29C2-489D-BF4A-F37FE7ECE9D6}|Mobile\\Mobile.csproj|d:\\aneliya\\uni\\ai integrations\\codehub\\codehub\\mobile\\models\\languageoptions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7DB4BD4A-29C2-489D-BF4A-F37FE7ECE9D6}|Mobile\\Mobile.csproj|solutionrelative:mobile\\models\\languageoptions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\aneli\\.nuget\\packages\\microsoft.maui.controls.build.tasks\\8.0.100\\buildTransitive\\netstandard2.0\\Microsoft.Maui.Controls.targets||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7DB4BD4A-29C2-489D-BF4A-F37FE7ECE9D6}|Mobile\\Mobile.csproj|c:\\users\\aneli\\desktop\\codehub\\mobile\\createsnippetpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "AbsoluteMoniker": "D:0:0:{7DB4BD4A-29C2-489D-BF4A-F37FE7ECE9D6}|Mobile\\Mobile.csproj|d:\\aneliya\\uni\\ai integrations\\codehub\\codehub\\mobile\\createsnippetpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{7DB4BD4A-29C2-489D-BF4A-F37FE7ECE9D6}|Mobile\\Mobile.csproj|solutionrelative:mobile\\createsnippetpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7DB4BD4A-29C2-489D-BF4A-F37FE7ECE9D6}|Mobile\\Mobile.csproj|c:\\users\\aneli\\desktop\\codehub\\mobile\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "AbsoluteMoniker": "D:0:0:{7DB4BD4A-29C2-489D-BF4A-F37FE7ECE9D6}|Mobile\\Mobile.csproj|d:\\aneliya\\uni\\ai integrations\\codehub\\codehub\\mobile\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{7DB4BD4A-29C2-489D-BF4A-F37FE7ECE9D6}|Mobile\\Mobile.csproj|solutionrelative:mobile\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7DB4BD4A-29C2-489D-BF4A-F37FE7ECE9D6}|Mobile\\Mobile.csproj|c:\\users\\aneli\\desktop\\codehub\\mobile\\mainpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{7DB4BD4A-29C2-489D-BF4A-F37FE7ECE9D6}|Mobile\\Mobile.csproj|d:\\aneliya\\uni\\ai integrations\\codehub\\codehub\\mobile\\mainpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7DB4BD4A-29C2-489D-BF4A-F37FE7ECE9D6}|Mobile\\Mobile.csproj|solutionrelative:mobile\\mainpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7DB4BD4A-29C2-489D-BF4A-F37FE7ECE9D6}|Mobile\\Mobile.csproj|c:\\users\\aneli\\desktop\\codehub\\mobile\\mauiprogram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{7DB4BD4A-29C2-489D-BF4A-F37FE7ECE9D6}|Mobile\\Mobile.csproj|d:\\aneliya\\uni\\ai integrations\\codehub\\codehub\\mobile\\mauiprogram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7DB4BD4A-29C2-489D-BF4A-F37FE7ECE9D6}|Mobile\\Mobile.csproj|solutionrelative:mobile\\mauiprogram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7DB4BD4A-29C2-489D-BF4A-F37FE7ECE9D6}|Mobile\\Mobile.csproj|c:\\users\\aneli\\desktop\\codehub\\mobile\\services\\dbservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{7DB4BD4A-29C2-489D-BF4A-F37FE7ECE9D6}|Mobile\\Mobile.csproj|d:\\aneliya\\uni\\ai integrations\\codehub\\codehub\\mobile\\services\\dbservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7DB4BD4A-29C2-489D-BF4A-F37FE7ECE9D6}|Mobile\\Mobile.csproj|solutionrelative:mobile\\services\\dbservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7DB4BD4A-29C2-489D-BF4A-F37FE7ECE9D6}|Mobile\\Mobile.csproj|c:\\users\\aneli\\desktop\\codehub\\mobile\\createsnippetpage.xaml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "AbsoluteMoniker": "D:0:0:{7DB4BD4A-29C2-489D-BF4A-F37FE7ECE9D6}|Mobile\\Mobile.csproj|d:\\aneliya\\uni\\ai integrations\\codehub\\codehub\\mobile\\createsnippetpage.xaml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
       "RelativeMoniker": "D:0:0:{7DB4BD4A-29C2-489D-BF4A-F37FE7ECE9D6}|Mobile\\Mobile.csproj|solutionrelative:mobile\\createsnippetpage.xaml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\aneli\\.nuget\\packages\\microsoft.windowsappsdk\\1.5.240802000\\buildTransitive\\Microsoft.UI.Xaml.Markup.Compiler.interop.targets||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7DB4BD4A-29C2-489D-BF4A-F37FE7ECE9D6}|Mobile\\Mobile.csproj|c:\\users\\aneli\\desktop\\codehub\\mobile\\models\\snippet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{7DB4BD4A-29C2-489D-BF4A-F37FE7ECE9D6}|Mobile\\Mobile.csproj|d:\\aneliya\\uni\\ai integrations\\codehub\\codehub\\mobile\\models\\snippet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7DB4BD4A-29C2-489D-BF4A-F37FE7ECE9D6}|Mobile\\Mobile.csproj|solutionrelative:mobile\\models\\snippet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7DB4BD4A-29C2-489D-BF4A-F37FE7ECE9D6}|Mobile\\Mobile.csproj|c:\\users\\aneli\\desktop\\codehub\\mobile\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{7DB4BD4A-29C2-489D-BF4A-F37FE7ECE9D6}|Mobile\\Mobile.csproj|d:\\aneliya\\uni\\ai integrations\\codehub\\codehub\\mobile\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7DB4BD4A-29C2-489D-BF4A-F37FE7ECE9D6}|Mobile\\Mobile.csproj|solutionrelative:mobile\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7DB4BD4A-29C2-489D-BF4A-F37FE7ECE9D6}|Mobile\\Mobile.csproj|c:\\users\\aneli\\desktop\\codehub\\mobile\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "AbsoluteMoniker": "D:0:0:{7DB4BD4A-29C2-489D-BF4A-F37FE7ECE9D6}|Mobile\\Mobile.csproj|d:\\aneliya\\uni\\ai integrations\\codehub\\codehub\\mobile\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{7DB4BD4A-29C2-489D-BF4A-F37FE7ECE9D6}|Mobile\\Mobile.csproj|solutionrelative:mobile\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     }
   ],
@@ -87,10 +86,8 @@
               "DocumentIndex": 0,
               "Title": "README.md",
               "DocumentMoniker": "C:\\Users\\aneli\\Desktop\\CodeHub\\README.md",
-              "RelativeDocumentMoniker": "README.md",
               "ToolTip": "C:\\Users\\aneli\\Desktop\\CodeHub\\README.md",
-              "RelativeToolTip": "README.md",
-              "ViewState": "AgIAABsAAAAAAAAAAAAAAD4AAAADAAAAAAAAAA==",
+              "ViewState": "AgIAABsAAAAAAAAAAAAAAC4AAAA4AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
               "WhenOpened": "2026-04-17T00:26:26.875Z",
               "EditorCaption": ""
@@ -99,152 +96,139 @@
               "$type": "Document",
               "DocumentIndex": 3,
               "Title": "SnippetDetailsPage.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\aneli\\Desktop\\CodeHub\\Mobile\\SnippetDetailsPage.xaml.cs",
+              "DocumentMoniker": "D:\\Aneliya\\Uni\\AI Integrations\\CodeHub\\CodeHub\\Mobile\\SnippetDetailsPage.xaml.cs",
               "RelativeDocumentMoniker": "Mobile\\SnippetDetailsPage.xaml.cs",
-              "ToolTip": "C:\\Users\\aneli\\Desktop\\CodeHub\\Mobile\\SnippetDetailsPage.xaml.cs",
+              "ToolTip": "D:\\Aneliya\\Uni\\AI Integrations\\CodeHub\\CodeHub\\Mobile\\SnippetDetailsPage.xaml.cs",
               "RelativeToolTip": "Mobile\\SnippetDetailsPage.xaml.cs",
               "ViewState": "AgIAADoAAAAAAAAAAAAnwD8AAAA2AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-16T17:48:10.567Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-16T17:48:10.567Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
               "Title": "SnippetDetailsPage.xaml",
-              "DocumentMoniker": "C:\\Users\\aneli\\Desktop\\CodeHub\\Mobile\\SnippetDetailsPage.xaml",
+              "DocumentMoniker": "D:\\Aneliya\\Uni\\AI Integrations\\CodeHub\\CodeHub\\Mobile\\SnippetDetailsPage.xaml",
               "RelativeDocumentMoniker": "Mobile\\SnippetDetailsPage.xaml",
-              "ToolTip": "C:\\Users\\aneli\\Desktop\\CodeHub\\Mobile\\SnippetDetailsPage.xaml",
+              "ToolTip": "D:\\Aneliya\\Uni\\AI Integrations\\CodeHub\\CodeHub\\Mobile\\SnippetDetailsPage.xaml",
               "RelativeToolTip": "Mobile\\SnippetDetailsPage.xaml",
               "ViewState": "AgIAAEoAAAAAAAAAAAArwFgAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-04-16T18:51:10.441Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-16T18:51:10.441Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
               "Title": "CreateSnippetPage.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\aneli\\Desktop\\CodeHub\\Mobile\\CreateSnippetPage.xaml.cs",
+              "DocumentMoniker": "D:\\Aneliya\\Uni\\AI Integrations\\CodeHub\\CodeHub\\Mobile\\CreateSnippetPage.xaml.cs",
               "RelativeDocumentMoniker": "Mobile\\CreateSnippetPage.xaml.cs",
-              "ToolTip": "C:\\Users\\aneli\\Desktop\\CodeHub\\Mobile\\CreateSnippetPage.xaml.cs",
+              "ToolTip": "D:\\Aneliya\\Uni\\AI Integrations\\CodeHub\\CodeHub\\Mobile\\CreateSnippetPage.xaml.cs",
               "RelativeToolTip": "Mobile\\CreateSnippetPage.xaml.cs",
               "ViewState": "AgIAABQAAAAAAAAAAAAwwCAAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-16T20:28:06.209Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-16T20:28:06.209Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "AiService.cs",
-              "DocumentMoniker": "C:\\Users\\aneli\\Desktop\\CodeHub\\Mobile\\Services\\AiService.cs",
+              "DocumentMoniker": "D:\\Aneliya\\Uni\\AI Integrations\\CodeHub\\CodeHub\\Mobile\\Services\\AiService.cs",
               "RelativeDocumentMoniker": "Mobile\\Services\\AiService.cs",
-              "ToolTip": "C:\\Users\\aneli\\Desktop\\CodeHub\\Mobile\\Services\\AiService.cs",
+              "ToolTip": "D:\\Aneliya\\Uni\\AI Integrations\\CodeHub\\CodeHub\\Mobile\\Services\\AiService.cs",
               "RelativeToolTip": "Mobile\\Services\\AiService.cs",
               "ViewState": "AgIAAEsAAAAAAAAAAAAYwCQAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-16T19:17:04.3Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-16T19:17:04.3Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 7,
               "Title": "Microsoft.Maui.Controls.targets",
               "DocumentMoniker": "C:\\Users\\aneli\\.nuget\\packages\\microsoft.maui.controls.build.tasks\\8.0.100\\buildTransitive\\netstandard2.0\\Microsoft.Maui.Controls.targets",
-              "RelativeDocumentMoniker": "..\\..\\.nuget\\packages\\microsoft.maui.controls.build.tasks\\8.0.100\\buildTransitive\\netstandard2.0\\Microsoft.Maui.Controls.targets",
               "ToolTip": "C:\\Users\\aneli\\.nuget\\packages\\microsoft.maui.controls.build.tasks\\8.0.100\\buildTransitive\\netstandard2.0\\Microsoft.Maui.Controls.targets",
-              "RelativeToolTip": "..\\..\\.nuget\\packages\\microsoft.maui.controls.build.tasks\\8.0.100\\buildTransitive\\netstandard2.0\\Microsoft.Maui.Controls.targets",
               "ViewState": "AgIAAEkAAAAAAAAAAAAiwGEAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003801|",
-              "WhenOpened": "2026-04-16T20:22:47.349Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-16T20:22:47.349Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
               "Title": "LanguageOptions.cs",
-              "DocumentMoniker": "C:\\Users\\aneli\\Desktop\\CodeHub\\Mobile\\Models\\LanguageOptions.cs",
+              "DocumentMoniker": "D:\\Aneliya\\Uni\\AI Integrations\\CodeHub\\CodeHub\\Mobile\\Models\\LanguageOptions.cs",
               "RelativeDocumentMoniker": "Mobile\\Models\\LanguageOptions.cs",
-              "ToolTip": "C:\\Users\\aneli\\Desktop\\CodeHub\\Mobile\\Models\\LanguageOptions.cs",
+              "ToolTip": "D:\\Aneliya\\Uni\\AI Integrations\\CodeHub\\CodeHub\\Mobile\\Models\\LanguageOptions.cs",
               "RelativeToolTip": "Mobile\\Models\\LanguageOptions.cs",
               "ViewState": "AgIAADkAAAAAAAAAAAAwwE8AAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-16T19:39:55.799Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-16T19:39:55.799Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
               "Title": "CodeResult.cs",
-              "DocumentMoniker": "C:\\Users\\aneli\\Desktop\\CodeHub\\Mobile\\Models\\CodeResult.cs",
+              "DocumentMoniker": "D:\\Aneliya\\Uni\\AI Integrations\\CodeHub\\CodeHub\\Mobile\\Models\\CodeResult.cs",
               "RelativeDocumentMoniker": "Mobile\\Models\\CodeResult.cs",
-              "ToolTip": "C:\\Users\\aneli\\Desktop\\CodeHub\\Mobile\\Models\\CodeResult.cs",
+              "ToolTip": "D:\\Aneliya\\Uni\\AI Integrations\\CodeHub\\CodeHub\\Mobile\\Models\\CodeResult.cs",
               "RelativeToolTip": "Mobile\\Models\\CodeResult.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-16T23:27:41.846Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-16T23:27:41.846Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 8,
               "Title": "CreateSnippetPage.xaml",
-              "DocumentMoniker": "C:\\Users\\aneli\\Desktop\\CodeHub\\Mobile\\CreateSnippetPage.xaml",
+              "DocumentMoniker": "D:\\Aneliya\\Uni\\AI Integrations\\CodeHub\\CodeHub\\Mobile\\CreateSnippetPage.xaml",
               "RelativeDocumentMoniker": "Mobile\\CreateSnippetPage.xaml",
-              "ToolTip": "C:\\Users\\aneli\\Desktop\\CodeHub\\Mobile\\CreateSnippetPage.xaml",
+              "ToolTip": "D:\\Aneliya\\Uni\\AI Integrations\\CodeHub\\CodeHub\\Mobile\\CreateSnippetPage.xaml",
               "RelativeToolTip": "Mobile\\CreateSnippetPage.xaml",
               "ViewState": "AgIAAIUAAAAAAAAAAAAkwK0AAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-04-16T20:55:31.279Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-16T20:55:31.279Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 9,
               "Title": "MainPage.xaml",
-              "DocumentMoniker": "C:\\Users\\aneli\\Desktop\\CodeHub\\Mobile\\MainPage.xaml",
+              "DocumentMoniker": "D:\\Aneliya\\Uni\\AI Integrations\\CodeHub\\CodeHub\\Mobile\\MainPage.xaml",
               "RelativeDocumentMoniker": "Mobile\\MainPage.xaml",
-              "ToolTip": "C:\\Users\\aneli\\Desktop\\CodeHub\\Mobile\\MainPage.xaml",
+              "ToolTip": "D:\\Aneliya\\Uni\\AI Integrations\\CodeHub\\CodeHub\\Mobile\\MainPage.xaml",
               "RelativeToolTip": "Mobile\\MainPage.xaml",
               "ViewState": "AgIAAC8AAAAAAAAAAAAkwE8AAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-04-16T17:42:52.762Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-16T17:42:52.762Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 10,
               "Title": "MainPage.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\aneli\\Desktop\\CodeHub\\Mobile\\MainPage.xaml.cs",
+              "DocumentMoniker": "D:\\Aneliya\\Uni\\AI Integrations\\CodeHub\\CodeHub\\Mobile\\MainPage.xaml.cs",
               "RelativeDocumentMoniker": "Mobile\\MainPage.xaml.cs",
-              "ToolTip": "C:\\Users\\aneli\\Desktop\\CodeHub\\Mobile\\MainPage.xaml.cs",
+              "ToolTip": "D:\\Aneliya\\Uni\\AI Integrations\\CodeHub\\CodeHub\\Mobile\\MainPage.xaml.cs",
               "RelativeToolTip": "Mobile\\MainPage.xaml.cs",
               "ViewState": "AgIAABkAAAAAAAAAAAAQwDYAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-16T17:45:02.948Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-16T17:45:02.948Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 11,
               "Title": "MauiProgram.cs",
-              "DocumentMoniker": "C:\\Users\\aneli\\Desktop\\CodeHub\\Mobile\\MauiProgram.cs",
+              "DocumentMoniker": "D:\\Aneliya\\Uni\\AI Integrations\\CodeHub\\CodeHub\\Mobile\\MauiProgram.cs",
               "RelativeDocumentMoniker": "Mobile\\MauiProgram.cs",
-              "ToolTip": "C:\\Users\\aneli\\Desktop\\CodeHub\\Mobile\\MauiProgram.cs",
+              "ToolTip": "D:\\Aneliya\\Uni\\AI Integrations\\CodeHub\\CodeHub\\Mobile\\MauiProgram.cs",
               "RelativeToolTip": "Mobile\\MauiProgram.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-16T22:00:32.073Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-16T22:00:32.073Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 12,
               "Title": "DbService.cs",
-              "DocumentMoniker": "C:\\Users\\aneli\\Desktop\\CodeHub\\Mobile\\Services\\DbService.cs",
+              "DocumentMoniker": "D:\\Aneliya\\Uni\\AI Integrations\\CodeHub\\CodeHub\\Mobile\\Services\\DbService.cs",
               "RelativeDocumentMoniker": "Mobile\\Services\\DbService.cs",
-              "ToolTip": "C:\\Users\\aneli\\Desktop\\CodeHub\\Mobile\\Services\\DbService.cs",
+              "ToolTip": "D:\\Aneliya\\Uni\\AI Integrations\\CodeHub\\CodeHub\\Mobile\\Services\\DbService.cs",
               "RelativeToolTip": "Mobile\\Services\\DbService.cs",
               "ViewState": "AgIAAAIAAAAAAAAAAAAvwA4AAABIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -254,9 +238,9 @@
               "$type": "Document",
               "DocumentIndex": 13,
               "Title": "CreateSnippetPage.xaml",
-              "DocumentMoniker": "C:\\Users\\aneli\\Desktop\\CodeHub\\Mobile\\CreateSnippetPage.xaml",
+              "DocumentMoniker": "D:\\Aneliya\\Uni\\AI Integrations\\CodeHub\\CodeHub\\Mobile\\CreateSnippetPage.xaml",
               "RelativeDocumentMoniker": "Mobile\\CreateSnippetPage.xaml",
-              "ToolTip": "C:\\Users\\aneli\\Desktop\\CodeHub\\Mobile\\CreateSnippetPage.xaml",
+              "ToolTip": "D:\\Aneliya\\Uni\\AI Integrations\\CodeHub\\CodeHub\\Mobile\\CreateSnippetPage.xaml",
               "RelativeToolTip": "Mobile\\CreateSnippetPage.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2026-04-16T20:21:30.817Z"
@@ -266,9 +250,7 @@
               "DocumentIndex": 14,
               "Title": "Microsoft.UI.Xaml.Markup.Compiler.interop.targets",
               "DocumentMoniker": "C:\\Users\\aneli\\.nuget\\packages\\microsoft.windowsappsdk\\1.5.240802000\\buildTransitive\\Microsoft.UI.Xaml.Markup.Compiler.interop.targets",
-              "RelativeDocumentMoniker": "..\\..\\.nuget\\packages\\microsoft.windowsappsdk\\1.5.240802000\\buildTransitive\\Microsoft.UI.Xaml.Markup.Compiler.interop.targets",
               "ToolTip": "C:\\Users\\aneli\\.nuget\\packages\\microsoft.windowsappsdk\\1.5.240802000\\buildTransitive\\Microsoft.UI.Xaml.Markup.Compiler.interop.targets",
-              "RelativeToolTip": "..\\..\\.nuget\\packages\\microsoft.windowsappsdk\\1.5.240802000\\buildTransitive\\Microsoft.UI.Xaml.Markup.Compiler.interop.targets",
               "ViewState": "AgIAAOcBAAAAAAAAAAD4v/gBAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003801|",
               "WhenOpened": "2026-04-16T20:10:50.394Z"
@@ -277,9 +259,9 @@
               "$type": "Document",
               "DocumentIndex": 15,
               "Title": "Snippet.cs",
-              "DocumentMoniker": "C:\\Users\\aneli\\Desktop\\CodeHub\\Mobile\\Models\\Snippet.cs",
+              "DocumentMoniker": "D:\\Aneliya\\Uni\\AI Integrations\\CodeHub\\CodeHub\\Mobile\\Models\\Snippet.cs",
               "RelativeDocumentMoniker": "Mobile\\Models\\Snippet.cs",
-              "ToolTip": "C:\\Users\\aneli\\Desktop\\CodeHub\\Mobile\\Models\\Snippet.cs",
+              "ToolTip": "D:\\Aneliya\\Uni\\AI Integrations\\CodeHub\\CodeHub\\Mobile\\Models\\Snippet.cs",
               "RelativeToolTip": "Mobile\\Models\\Snippet.cs",
               "ViewState": "AgIAABAAAAAAAAAAAAAQwBQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -289,22 +271,21 @@
               "$type": "Document",
               "DocumentIndex": 17,
               "Title": "App.xaml",
-              "DocumentMoniker": "C:\\Users\\aneli\\Desktop\\CodeHub\\Mobile\\App.xaml",
+              "DocumentMoniker": "D:\\Aneliya\\Uni\\AI Integrations\\CodeHub\\CodeHub\\Mobile\\App.xaml",
               "RelativeDocumentMoniker": "Mobile\\App.xaml",
-              "ToolTip": "C:\\Users\\aneli\\Desktop\\CodeHub\\Mobile\\App.xaml",
+              "ToolTip": "D:\\Aneliya\\Uni\\AI Integrations\\CodeHub\\CodeHub\\Mobile\\App.xaml",
               "RelativeToolTip": "Mobile\\App.xaml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-04-16T17:42:33.753Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-16T17:42:33.753Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 16,
               "Title": "App.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\aneli\\Desktop\\CodeHub\\Mobile\\App.xaml.cs",
+              "DocumentMoniker": "D:\\Aneliya\\Uni\\AI Integrations\\CodeHub\\CodeHub\\Mobile\\App.xaml.cs",
               "RelativeDocumentMoniker": "Mobile\\App.xaml.cs",
-              "ToolTip": "C:\\Users\\aneli\\Desktop\\CodeHub\\Mobile\\App.xaml.cs",
+              "ToolTip": "D:\\Aneliya\\Uni\\AI Integrations\\CodeHub\\CodeHub\\Mobile\\App.xaml.cs",
               "RelativeToolTip": "Mobile\\App.xaml.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
